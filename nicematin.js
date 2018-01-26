@@ -21,6 +21,7 @@ console.log('init userscript');
 //               + Cache les articles sponsorisés
 //               + Cache le bandeau d'article en haut de page
 //
+// Version 1.0a :+ Caches les articles sponsorisés (ajout)
 //
 
 // init google DFP vars to 0;
@@ -73,5 +74,10 @@ else{console.log('#7 : body div.RhooBg not found');}
 var modalRhoo = document.querySelector('body div.modalRhoo');
 if(modalRhoo!=null){modalRhoo.style.display="none";}
 else{console.log('#8 : body div.modalRhoo not found');}
+
+// Suppression des articles sponsorisés
+var sponsor = document.querySelector('.nm_hp_sponsored');
+if(sponsor!=null){sponsor.style.display="none";}
+else{console.log('#9 : .nm_hp_sponsored not found');}
 
 })();
